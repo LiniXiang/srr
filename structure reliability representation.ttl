@@ -1,0 +1,221 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix dce:    <http://purl.org/dc/elements/1.1/> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+
+@prefix srr: <https://w3id.org/srr#> .
+@base <https://w3id.org/srr#> .
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################
+# METADATA
+#################################
+
+<https://w3id.org/srr#> rdf:type voaf:Vocabulary , 
+                                    owl:Ontology ;
+    owl:versionInfo "April 12, 2021"^^xsd:string ;
+    #owl:versionIRI <https://w3id.org/srr/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
+    #owl:priorVersion <https://w3id.org/srr/1.0.0> ;
+    dcterms:title "Structural Reliability Representation"@en ;
+    dcterms:description """This ontology includes two reliability analysis methods, Monte Carlo  and First Order Second Moment. It can be combined with other building ontology to form a wider range of structure department ontology."""@en ;
+    dcterms:creator [a foaf:Person ; foaf:name "Lini Xiang" ] ;
+    dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
+    vann:preferredNamespacePrefix "srr" ;
+    vann:preferredNamespaceUri <https://w3id.org/srr#> ;
+    dce:Language "en" ;
+    dce:title "srr" ;
+    dce:description "Structural Reliability Representation" .
+	
+#################################
+# CLASSES
+#################################
+
+srr:StructuralSystem 
+              a owl:Class ;
+              rdfs:comment """The structural system represents an abstract representation of the mechanical concepts of civil,  mechanical or hydraulic or aerospace engineering."""@en ,
+                           """结构系统表示一个土木或者机械或者水利或者航空航天工程的整体性力学抽象表示。"""@cn ;
+              rdfs:label "Structural System"@en .
+
+srr:RandomVariable 
+              a owl:Class ;
+              rdfs:subClassOf srr:StructuralSystem ;
+              rdfs:comment """Random variables are used for structural uncertainty analysis. It refers to events that may or may not occur in reality, and therefore have random and uncertain values."""@en ,
+                           """随机变量用于结构不确定性分析。它指代现实中可能发生也可能不发生的事件，因此具有随机的、不确定的值。"""@cn ;
+              rdfs:label "RandomVariable"@en .
+
+srr:Distribution 
+              a owl:Class ;
+              rdfs:subClassOf srr:RandomVariable ;
+              rdfs:comment """Distribution is a statistical feature that describes the value of a random variable."""@en ,
+                           """概率分布是一种描述随机变量的值的统计学特征。"""@cn ;
+              rdfs:label "Distribution"@en .
+
+srr:Mean 
+              a owl:Class ;
+              rdfs:subClassOf srr:RandomVariable ;
+              rdfs:comment """The mean value of the distribution of a random variable."""@en ,
+                           """随机变量概率分布的平均值。"""@cn ;
+              rdfs:label "Mean"@en .
+
+srr:StandardDeviation 
+              a owl:Class ;
+              rdfs:subClassOf srr:RandomVariable ;
+              rdfs:comment """Standard deviation describes the volatility of the distribution of a random variable."""@en ,
+                           """标准差描述随机变量的概率分布的波动性。"""@cn ;
+              rdfs:label "Standard Deviation"@en .
+
+srr:LimitEquation 
+              a owl:Class ;
+              rdfs:subClassOf srr:StructuralSystem ;
+              rdfs:comment """The limit state equation is the relationship between variables when the structure is about to crack."""@en ,
+			               """极限状态方程是结构将要破坏时变量之间的关系。"""@cn ;
+              rdfs:label "Limit Equation"@en .
+
+srr:MenteCarlo 
+              a owl:Class ;
+              rdfs:subClassOf srr:LimitEquation ;
+              rdfs:comment """The Monte Carlo method simulates the approximate solution of the problem through the statistical results of random sampling."""@en ,
+                           """蒙特卡罗方法通过随机抽样的统计学结果模拟问题的近似解。"""@cn ;
+              rdfs:label "Mente Carlo Method"@en .
+
+srr:Sample 
+              a owl:Class ;
+              rdfs:subClassOf srr:MenteCarlo ;
+              rdfs:comment """The sampling results of Monte Carlo method."""@en ,
+                           """蒙特卡罗抽样的结果。"""@cn ;
+              rdfs:label "Sample"@en .
+
+srr:FailureSum 
+              a owl:Class ;
+              rdfs:subClassOf srr:MenteCarlo ;
+              rdfs:comment """This is the total number of structural failures after substituting the sample into the limit state function."""@en ,
+			               """这是将样本代入极限状态函数后结构失效的总次数。"""@cn ; 
+              rdfs:label "Failure Sum"@en .
+
+srr:Reliability 
+              a owl:Class ;
+              rdfs:comment """It is an important design index that enables the reliability of the building structure to meet various predetermined functions."""@en ,
+                           """它是使建筑结构的可靠度能满足各项预定的功能的重要设计指标。"""@cn ;
+              rdfs:label "Reliability"@en .
+
+srr:FailureProbability 
+              a owl:Class ;
+              rdfs:comment """The possibility of structural damage during the service period."""@en ,
+                           """建筑结构在服役期内破坏的可能性。"""@cn ;
+			  rdfs:label "Failure Probability"@en .
+
+srr:FOSM 
+              a owl:Class ;
+              rdfs:subClassOf srr:LimitEquation ;
+              rdfs:comment """The first order second moment method is to use the mean value and standard deviation to perform linear Taylor expansion of the limit function, to solve the problem iteratively ."""@en ,
+                           """一次二阶矩是采用均值和标准差对设计函数进行线性泰勒展开，得到新的数学模型去迭代求解的方法。"""@cn ;
+              rdfs:label "FOSM"@en .
+			  
+srr:Gradient  
+              a owl:Class ;
+              rdfs:subClassOf srr:FOSM ;
+              rdfs:comment """The function changes fastest in this direction."""@en ;
+			               """函数沿着该方向变化最快。"""@cn ;
+              rdfs:label "Gradient"@en .
+
+srr:InitialValue 
+              a owl:Class ;
+              rdfs:subClassOf srr:FOSM ;
+              rdfs:comment """The starting point of executing the first order second moment method."""@en ,
+                           """一次二阶矩方法的迭代起始点。"""@cn ;
+              rdfs:label "Initial Value"@en .
+
+srr:BreakPoint 
+              a owl:Class ;
+              rdfs:subClassOf srr:FOSM ;
+              rdfs:comment """Most likely point of failure."""@en ,
+                           """最可能失效点。"""@cn ;
+              rdfs:label "Break Point"@en .
+
+#################################
+# OBJECT PROPERTIES
+#################################
+
+srr:hasMechanicalCharacteristics 
+              a owl:ObjectProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  rdfs:Resource ;
+              rdfs:comment """A relationship that various mechanical properties exist within a structural system."""@en ,
+                           """描述结构体系中存在各种力学特性的一种关系。"""@cn ;
+              rdfs:label "has Mechanical Characteristics"@en .
+
+srr:hasStatisticsCharacteristics 
+              a owl:ObjectProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  rdfs:Resource ;
+              rdfs:comment """There are statistics relevant quantities that can describe things."""@en ,
+                           """存在描述一类事物的统计学相关量。"""@cn ;
+              rdfs:label "has Statistics Characteristics"@en .
+
+srr:hasSolutions 
+              a owl:ObjectProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  rdfs:Resource ;
+              rdfs:comment """Defines that the function has a method to obtain solution."""@en ,
+                           """描述对于函数来说存在解法。"""@cn ;
+              rdfs:label "has Solutions"@en .
+
+srr:hasStepsWithinSolutions 
+              a owl:ObjectProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  rdfs:Resource ;
+              rdfs:comment """Describes that there are many steps within the solution."""@en ,
+                           """描述在解法内部存在许多步骤。"""@cn ;
+              rdfs:label "has Steps Within Solutions"@en .
+
+srr:hasCalculation 
+              a owl:ObjectProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  rdfs:Resource ;
+              rdfs:comment """Describes the mathematical process of transforming one quantity to another."""@en ,
+                           """描述从一个量转换成另一个量的数学过程。"""@cn ;
+              rdfs:label "has Calculation"@en .
+
+#################################################################
+#    Data properties
+#################################################################
+
+srr:hasNumericalValue 
+              a owl:DatatypeProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  xsd:Double ;
+              rdfs:comment """Describes a physical quantity that has a numerical value."""@en ,
+                           """描述一个物理量具有数字值。"""@cn ;
+              rdfs:label "has Numerical Value"@en .
+
+srr:noNumericalValue 
+              a owl:DatatypeProperty ;
+              rdfs:domain owl:Class ;
+              rdfs:range  xsd:string ;
+              rdfs:comment """Describes a physical quantity that does not have the usual mathematical value in numerical form."""@en ,
+                           """描述一个物理量不具有通常意义上的数学值。"""@cn ;
+              rdfs:label "no Numerical Value"@en .
+
+
