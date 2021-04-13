@@ -5,27 +5,9 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:   <http://purl.org/vocab/vann/> .
-@prefix voaf:   <http://purl.org/vocommons/voaf#> .
-@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
-@prefix dce:    <http://purl.org/dc/elements/1.1/> .
-@prefix dbo:    <http://dbpedia.org/ontology/> .
-@prefix schema: <http://schema.org/> .
 @base <https://w3id.org/srr#> .
-
-voaf:Vocabulary a owl:Class .
-dcterms:title a owl:AnnotationProperty .
-dcterms:description a owl:AnnotationProperty .
-dcterms:issued a owl:AnnotationProperty .
-dcterms:modified a owl:AnnotationProperty .
-dcterms:creator a owl:AnnotationProperty .
-dcterms:contributor a owl:AnnotationProperty .
-dcterms:license a owl:AnnotationProperty .
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-vann:preferredNamespaceUri a owl:AnnotationProperty .
-vs:term_status a owl:AnnotationProperty .
-foaf:Person a owl:Class .
-foaf:name a owl:DatatypeProperty .
 
 #################################
 # METADATA
@@ -33,19 +15,13 @@ foaf:name a owl:DatatypeProperty .
 
 <https://w3id.org/srr#> rdf:type voaf:Vocabulary , 
                                     owl:Ontology ;
-    owl:versionInfo "April 12, 2021"^^xsd:string ;
-    owl:versionIRI <https://w3id.org/srr/1.0.0> ;
-    owl:versionInfo "1.0.0" ;
     dcterms:title "Structural Reliability Representation"@en ;
-    dcterms:description """This ontology includes two reliability analysis methods, Monte Carlo  and First Order Second Moment. It can be combined with other building ontology to form a wider range of structure department ontology."""@en ;
-    dcterms:creator [a foaf:Person ; foaf:name "Lini Xiang" ] ;
-    dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
+    dcterms:creator [rdf:type foaf:Person ; foaf:name "Lini Xiang" ] ;
+    dcterms:description "This ontology includes two reliability analysis methods, Monte Carlo  and First Order Second Moment. It can be combined with other building ontology to form a wider range of structure department ontology."@en ;
+    dcterms:license "http://creativecommons.org/licenses/by/2.0" ;
     vann:preferredNamespacePrefix "srr" ;
-    vann:preferredNamespaceUri <https://w3id.org/srr#> ;
-    dce:Language "en" ;
-    dce:title "srr" ;
-    dce:description "Structural Reliability Representation" .
-	
+    vann:preferredNamespaceUri "https://w3id.org/srr#" ;
+
 #################################
 # CLASSES
 #################################
@@ -93,13 +69,13 @@ srr:MenteCarlo
 
 srr:Sample 
               a owl:Class ;
-			 rdfs:subClassOf srr:MenteCarlo ;
+	      rdfs:subClassOf srr:MenteCarlo ;
               rdfs:comment """The sampling results of Monte Carlo method."""@en ;
               rdfs:label "Sample"@en .
 
 srr:FailureSum 
               a owl:Class ;
-		      rdfs:subClassOf srr:MenteCarlo ;
+	      rdfs:subClassOf srr:MenteCarlo ;
               rdfs:comment """This is the total number of structural failures after substituting the sample into the limit state function."""@en ; 
               rdfs:label "Failure Sum"@en .
 
@@ -111,7 +87,7 @@ srr:Reliability
 srr:FailureProbability 
               a owl:Class ;
               rdfs:comment """The possibility of structural damage during the service period."""@en ;
-			  rdfs:label "Failure Probability"@en .
+	      rdfs:label "Failure Probability"@en .
 
 srr:FOSM 
               a owl:Class ;
@@ -127,7 +103,7 @@ srr:Gradient
 
 srr:InitialValue 
               a owl:Class ;
-			  rdfs:subClassOf srr:FOSM ;
+	      rdfs:subClassOf srr:FOSM ;
               rdfs:comment """The starting point of executing the first order second moment method."""@en ;
               rdfs:label "Initial Value"@en .
 
