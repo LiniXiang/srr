@@ -1,0 +1,61 @@
+@prefix : <http://www.semanticweb.org/asus/ontologies/2021/4/example1#> .
+@prefix ex1: <http://www.semanticweb.org/asus/ontologies/2021/4/example1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix srr: <https://w3id.org/srr#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/asus/ontologies/2021/4/example1#> .
+
+<http://www.semanticweb.org/asus/ontologies/2021/4/example1#> rdf:type owl:Ontology .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/srr#NumericalValue
+srr:NumericalValue rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/srr#Sample
+srr:Sample rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/asus/ontologies/2021/4/example1#Variable1
+:Variable1 rdf:type owl:NamedIndividual ,
+                    srr:Sample ;
+           srr:NumericalValue "-0.43359"^^xsd:double ,
+                              "-1.3077"^^xsd:double ,
+                              "-2.2588"^^xsd:double ,
+                              "0.31877"^^xsd:double ,
+                              "0.34262"^^xsd:double ,
+                              "0.53767"^^xsd:double ,
+                              "0.86217"^^xsd:double ,
+                              "1.8339"^^xsd:double ,
+                              "2.7694"^^xsd:double ,
+                              "3.5784"^^xsd:double .
+
+
+###  http://www.semanticweb.org/asus/ontologies/2021/4/example1#Variable2
+:Variable2 rdf:type owl:NamedIndividual ,
+                    srr:Sample ;
+           srr:NumericalValue "-0.10129"^^xsd:double ,
+                              "0.89334"^^xsd:double ,
+                              "1.1701"^^xsd:double ,
+                              "0.89232"^^xsd:double ,
+                              "0.20798"^^xsd:double ,
+                              "-1.0282"^^xsd:double ,
+                              "0.010246"^^xsd:double ,
+                              "-1.0097"^^xsd:double ,
+                              "-0.78518"^^xsd:double ,
+                              "-0.606"^^xsd:double .
+

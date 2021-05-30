@@ -1,0 +1,7 @@
+PREFIX ex3: <http://www.semanticweb.org/asus/ontologies/2021/4/example3#>
+PREFIX srr: <https://w3id.org/srr#> 
+SELECT ?v1 ?v2
+where{
+        ex3:Variable1 srr:NumericalValue ?v1. 
+        ex3:Variable2 srr:NumericalValue ?v2.
+    }

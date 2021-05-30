@@ -1,0 +1,9 @@
+PREFIX ex1: <http://www.semanticweb.org/asus/ontologies/2021/4/example1#>
+PREFIX srr: <https://w3id.org/srr#>
+#Find the 5 smallest values of variable one
+SELECT ?v1 
+WHERE{
+        ex1:Variable1 srr:NumericalValue ?v1. 
+    }
+ORDER BY ?v1
+LIMIT 5

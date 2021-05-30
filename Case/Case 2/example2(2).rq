@@ -1,0 +1,7 @@
+PREFIX ex2: <http://www.semanticweb.org/asus/ontologies/2021/4/example2#>
+PREFIX srr: <https://w3id.org/srr#>
+#Extract all the values of variable two
+SELECT ?v2 
+where{
+        ex2:Variable2  srr:NumericalValue ?v2. 
+    }
