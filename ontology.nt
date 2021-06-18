@@ -1,0 +1,332 @@
+<https://w3id.org/srr#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/srr#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/srr/1.0.0> .
+<https://w3id.org/srr#> <http://purl.org/dc/terms/contributor> "Ali khudhair, Cardiff University"@en .
+<https://w3id.org/srr#> <http://purl.org/dc/terms/creator> "Lini Xiang, Dalian University of Technology"@en .
+<https://w3id.org/srr#> <http://purl.org/dc/terms/description> "This ontology includes two reliability analysis methods, Monte Carlo and  First-Order Second-Moment (FOSM). It can be combined with other building ontology to form a wider range of structure department ontology."@en .
+<https://w3id.org/srr#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
+<https://w3id.org/srr#> <http://purl.org/dc/terms/title> "Structural Reliability Representation"@en .
+<https://w3id.org/srr#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "srr" .
+<https://w3id.org/srr#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/srr#> .
+<https://w3id.org/srr#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/srr#> <http://www.w3.org/2002/07/owl#versionInfo> "April 12, 2021" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/srr#hasCalculation
+<https://w3id.org/srr#hasCalculation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/srr#hasCalculation> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the mathematical process of transforming one quantity to another."@en .
+<https://w3id.org/srr#hasCalculation> <http://www.w3.org/2000/01/rdf-schema#label> "has Calculation"@en .
+# 
+# https://w3id.org/srr#hasMechanicalCharacteristics
+<https://w3id.org/srr#hasMechanicalCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/srr#hasMechanicalCharacteristics> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/srr#StructuralSystem> .
+<https://w3id.org/srr#hasMechanicalCharacteristics> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#FailureProbability> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#LimitStateEquation> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#RandomVariable> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Reliability> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/srr#hasMechanicalCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship that various mechanical properties exist within a structural system."@en .
+<https://w3id.org/srr#hasMechanicalCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "has Mechanical Characteristics"@en .
+# 
+# https://w3id.org/srr#hasSolutions
+<https://w3id.org/srr#hasSolutions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/srr#hasSolutions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/srr#LimitStateEquation> .
+<https://w3id.org/srr#hasSolutions> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#FOSM> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#MenteCarlo> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/srr#hasSolutions> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines that the function has a method to obtain solution."@en .
+<https://w3id.org/srr#hasSolutions> <http://www.w3.org/2000/01/rdf-schema#label> "has Solutions"@en .
+# 
+# https://w3id.org/srr#hasStatisticsCharacteristics
+<https://w3id.org/srr#hasStatisticsCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/srr#hasStatisticsCharacteristics> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/srr#RandomVariable> .
+<https://w3id.org/srr#hasStatisticsCharacteristics> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Distribution> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Mean> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#StandardDeviation> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/srr#hasStatisticsCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "There are statistics relevant quantities that can describe things."@en .
+<https://w3id.org/srr#hasStatisticsCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "has Statistics Characteristics"@en .
+# 
+# https://w3id.org/srr#hasStepsWithinSolutions
+<https://w3id.org/srr#hasStepsWithinSolutions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/srr#hasStepsWithinSolutions> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes that there are many steps within the solution."@en .
+<https://w3id.org/srr#hasStepsWithinSolutions> <http://www.w3.org/2000/01/rdf-schema#label> "has Steps Within Solutions"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/srr#NonNumericalValue
+<https://w3id.org/srr#NonNumericalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/srr#NonNumericalValue> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/srr#NumericalValue> .
+<https://w3id.org/srr#NonNumericalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a physical quantity that does not have the usual mathematical value in numerical form."@en .
+<https://w3id.org/srr#NonNumericalValue> <http://www.w3.org/2000/01/rdf-schema#label> "Non Numerical Value"@en .
+# 
+# https://w3id.org/srr#NumericalValue
+<https://w3id.org/srr#NumericalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/srr#NumericalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a physical quantity that has a numerical value."@en .
+<https://w3id.org/srr#NumericalValue> <http://www.w3.org/2000/01/rdf-schema#label> "Numerical Value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/srr#DesignPoint
+<https://w3id.org/srr#DesignPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#DesignPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#FOSM> .
+<https://w3id.org/srr#DesignPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Most likely point of failure."@en .
+<https://w3id.org/srr#DesignPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Design Point"@en .
+# 
+# https://w3id.org/srr#Distribution
+<https://w3id.org/srr#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#Distribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#RandomVariable> .
+<https://w3id.org/srr#Distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Distribution is a statistical feature that describes the value of a random variable."@en .
+<https://w3id.org/srr#Distribution> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution"@en .
+# 
+# https://w3id.org/srr#FOSM
+<https://w3id.org/srr#FOSM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#LimitStateEquation> .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasCalculation> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/srr#Reliability> .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasStepsWithinSolutions> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#DesignPoint> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Gradient> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#InitialValue> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/srr#MenteCarlo> .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2000/01/rdf-schema#comment> "The first order second moment method is to use the mean value and standard deviation to perform linear Taylor expansion of the limit function, to solve the problem iteratively ."@en .
+<https://w3id.org/srr#FOSM> <http://www.w3.org/2000/01/rdf-schema#label> "FOSM"@en .
+# 
+# https://w3id.org/srr#FailureProbability
+<https://w3id.org/srr#FailureProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#FailureProbability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#StructuralSystem> .
+<https://w3id.org/srr#FailureProbability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasCalculation> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/srr#Reliability> .
+<https://w3id.org/srr#FailureProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "The possibility of structural damage during the service period."@en .
+<https://w3id.org/srr#FailureProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Probability"@en .
+# 
+# https://w3id.org/srr#FailureSum
+<https://w3id.org/srr#FailureSum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#FailureSum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#MenteCarlo> .
+<https://w3id.org/srr#FailureSum> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/srr#Sample> .
+<https://w3id.org/srr#FailureSum> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the total number of structural failures after substituting the sample into the limit state function."@en .
+<https://w3id.org/srr#FailureSum> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Sum"@en .
+# 
+# https://w3id.org/srr#Gradient
+<https://w3id.org/srr#Gradient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#Gradient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#FOSM> .
+<https://w3id.org/srr#Gradient> <http://www.w3.org/2000/01/rdf-schema#comment> "The function changes fastest in this direction."@en .
+<https://w3id.org/srr#Gradient> <http://www.w3.org/2000/01/rdf-schema#label> "Gradient"@en .
+# 
+# https://w3id.org/srr#InitialValue
+<https://w3id.org/srr#InitialValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#InitialValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#FOSM> .
+<https://w3id.org/srr#InitialValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The starting point of executing the first order second moment method."@en .
+<https://w3id.org/srr#InitialValue> <http://www.w3.org/2000/01/rdf-schema#label> "Initial Value"@en .
+# 
+# https://w3id.org/srr#LimitStateEquation
+<https://w3id.org/srr#LimitStateEquation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#LimitStateEquation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#StructuralSystem> .
+<https://w3id.org/srr#LimitStateEquation> <http://www.w3.org/2000/01/rdf-schema#comment> "The limit state equation is the relationship between variables when the structure is about to crack."@en .
+<https://w3id.org/srr#LimitStateEquation> <http://www.w3.org/2000/01/rdf-schema#label> "Limit State Equation"@en .
+# 
+# https://w3id.org/srr#Mean
+<https://w3id.org/srr#Mean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#Mean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#RandomVariable> .
+<https://w3id.org/srr#Mean> <http://www.w3.org/2000/01/rdf-schema#comment> "The mean value of the distribution of a random variable."@en .
+<https://w3id.org/srr#Mean> <http://www.w3.org/2000/01/rdf-schema#label> "Mean"@en .
+# 
+# https://w3id.org/srr#MenteCarlo
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#LimitStateEquation> .
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasCalculation> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/srr#FailureProbability> .
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasStepsWithinSolutions> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#FailureSum> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Sample> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Monte Carlo method simulates the approximate solution of the limit equation through the statistical results of random sampling."@en .
+<https://w3id.org/srr#MenteCarlo> <http://www.w3.org/2000/01/rdf-schema#label> "Mente Carlo"@en .
+# 
+# https://w3id.org/srr#RandomVariable
+<https://w3id.org/srr#RandomVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#RandomVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#StructuralSystem> .
+<https://w3id.org/srr#RandomVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Random variables are used for structural uncertainty analysis. It refers to events that may or may not occur in reality, and therefore have random and uncertain values."@en .
+<https://w3id.org/srr#RandomVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Random Variable"@en .
+# 
+# https://w3id.org/srr#Reliability
+<https://w3id.org/srr#Reliability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#Reliability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#StructuralSystem> .
+<https://w3id.org/srr#Reliability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/srr#hasCalculation> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/srr#FailureProbability> .
+<https://w3id.org/srr#Reliability> <http://www.w3.org/2000/01/rdf-schema#comment> "It is an important design index that enables the reliability of the building structure to meet various predetermined functions."@en .
+<https://w3id.org/srr#Reliability> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability"@en .
+# 
+# https://w3id.org/srr#Sample
+<https://w3id.org/srr#Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#MenteCarlo> .
+<https://w3id.org/srr#Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "The sampling results of Monte Carlo method."@en .
+<https://w3id.org/srr#Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en .
+# 
+# https://w3id.org/srr#StandardDeviation
+<https://w3id.org/srr#StandardDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/srr#RandomVariable> .
+<https://w3id.org/srr#StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard deviation describes the volatility of the distribution of a random variable."@en .
+<https://w3id.org/srr#StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Deviation"@en .
+# 
+# https://w3id.org/srr#StructuralSystem
+<https://w3id.org/srr#StructuralSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/srr#StructuralSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The structural system represents an abstract representation of the mechanical concepts of civil,  mechanical or hydraulic or aerospace engineering."@en .
+<https://w3id.org/srr#StructuralSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Structural System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid26 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#DesignPoint> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Gradient> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#InitialValue> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Distribution> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Mean> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#StandardDeviation> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid34 <http://www.w3.org/2002/07/owl#members> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#FailureProbability> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#LimitStateEquation> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#RandomVariable> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/srr#Reliability> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

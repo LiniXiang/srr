@@ -1,0 +1,762 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/srr", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Structural Reliability Representation"
+    },
+    "iri" : "https://w3id.org/srr#",
+    "version" : "1.0.0",
+    "author" : [ "Lini Xiang, Dalian University of Technology" ],
+    "description" : {
+      "en" : "This ontology includes two reliability analysis methods, Monte Carlo and  First-Order Second-Moment (FOSM). It can be combined with other building ontology to form a wider range of structure department ontology."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Lini Xiang, Dalian University of Technology",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Ali khudhair, Cardiff University",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "srr",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      }, {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "April 12, 2021",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/srr#",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Structural Reliability Representation",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "6",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "23",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/srr#FailureSum",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FailureSum",
+      "en" : "Failure Sum"
+    },
+    "comment" : {
+      "en" : "This is the total number of structural failures after substituting the sample into the limit state function."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/srr#StructuralSystem",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralSystem",
+      "en" : "Structural System"
+    },
+    "subClasses" : [ "12", "13", "4", "14" ],
+    "comment" : {
+      "en" : "The structural system represents an abstract representation of the mechanical concepts of civil,  mechanical or hydraulic or aerospace engineering."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/srr#RandomVariable",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RandomVariable",
+      "en" : "Random Variable"
+    },
+    "subClasses" : [ "10", "8", "3" ],
+    "comment" : {
+      "en" : "Random variables are used for structural uncertainty analysis. It refers to events that may or may not occur in reality, and therefore have random and uncertain values."
+    },
+    "id" : "4",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "8", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "12", "13", "4", "14" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/srr#FailureProbability",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FailureProbability",
+      "en" : "Failure Probability"
+    },
+    "comment" : {
+      "en" : "The possibility of structural damage during the service period."
+    },
+    "id" : "12",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "26" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/srr#MenteCarlo",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MenteCarlo",
+      "en" : "Mente Carlo"
+    },
+    "subClasses" : [ "0", "27" ],
+    "comment" : {
+      "en" : "The Monte Carlo method simulates the approximate solution of the limit equation through the statistical results of random sampling."
+    },
+    "id" : "1",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/srr#Gradient",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gradient",
+      "en" : "Gradient"
+    },
+    "comment" : {
+      "en" : "The function changes fastest in this direction."
+    },
+    "id" : "36",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/srr#LimitStateEquation",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LimitStateEquation",
+      "en" : "Limit State Equation"
+    },
+    "subClasses" : [ "1", "26" ],
+    "comment" : {
+      "en" : "The limit state equation is the relationship between variables when the structure is about to crack."
+    },
+    "id" : "13",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/srr#Reliability",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reliability",
+      "en" : "Reliability"
+    },
+    "comment" : {
+      "en" : "It is an important design index that enables the reliability of the building structure to meet various predetermined functions."
+    },
+    "id" : "14",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/srr#StandardDeviation",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardDeviation",
+      "en" : "Standard Deviation"
+    },
+    "comment" : {
+      "en" : "Standard deviation describes the volatility of the distribution of a random variable."
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/srr#Sample",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sample",
+      "en" : "Sample"
+    },
+    "comment" : {
+      "en" : "The sampling results of Monte Carlo method."
+    },
+    "id" : "27",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/srr#Distribution",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Distribution",
+      "en" : "Distribution"
+    },
+    "comment" : {
+      "en" : "Distribution is a statistical feature that describes the value of a random variable."
+    },
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/srr#Mean",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mean",
+      "en" : "Mean"
+    },
+    "comment" : {
+      "en" : "The mean value of the distribution of a random variable."
+    },
+    "id" : "10",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/srr#FOSM",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FOSM",
+      "en" : "FOSM"
+    },
+    "subClasses" : [ "38", "36", "48" ],
+    "comment" : {
+      "en" : "The first order second moment method is to use the mean value and standard deviation to perform linear Taylor expansion of the limit function, to solve the problem iteratively ."
+    },
+    "id" : "26",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/srr#InitialValue",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InitialValue",
+      "en" : "Initial Value"
+    },
+    "comment" : {
+      "en" : "The starting point of executing the first order second moment method."
+    },
+    "id" : "38",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/srr#DesignPoint",
+    "baseIri" : "https://w3id.org/srr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DesignPoint",
+      "en" : "Design Point"
+    },
+    "comment" : {
+      "en" : "Most likely point of failure."
+    },
+    "id" : "48",
+    "superClasses" : [ "26" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "28",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "32",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "33",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "44",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "45",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/srr#hasStatisticsCharacteristics",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasStatisticsCharacteristics",
+      "en" : "has Statistics Characteristics"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "There are statistics relevant quantities that can describe things."
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "range" : "4",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "range" : "11",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "11",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "11",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/srr#hasStepsWithinSolutions",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasStepsWithinSolutions",
+      "en" : "has Steps Within Solutions"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Describes that there are many steps within the solution."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/srr#hasCalculation",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasCalculation",
+      "en" : "has Calculation"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Describes the mathematical process of transforming one quantity to another."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "24"
+  }, {
+    "range" : "14",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/srr#NonNumericalValue",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "NonNumericalValue",
+      "en" : "Non Numerical Value"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Describes a physical quantity that does not have the usual mathematical value in numerical form."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/srr#hasCalculation",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasCalculation",
+      "en" : "has Calculation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Describes the mathematical process of transforming one quantity to another."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "31"
+  }, {
+    "range" : "27",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "4",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "14",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "38",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "10",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/srr#hasSolutions",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasSolutions",
+      "en" : "has Solutions"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Defines that the function has a method to obtain solution."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "3",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "1",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/srr#hasCalculation",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasCalculation",
+      "en" : "has Calculation"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Describes the mathematical process of transforming one quantity to another."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/srr#hasCalculation",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasCalculation",
+      "en" : "has Calculation"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Describes the mathematical process of transforming one quantity to another."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "45"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "36",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "38",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/srr#hasMechanicalCharacteristics",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasMechanicalCharacteristics",
+      "en" : "has Mechanical Characteristics"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A relationship that various mechanical properties exist within a structural system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/srr#NumericalValue",
+    "baseIri" : "https://w3id.org/srr",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "NumericalValue",
+      "en" : "Numerical Value"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Describes a physical quantity that has a numerical value."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "range" : "26",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "26",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "26",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "1",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "13",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "13",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  } ]
+}

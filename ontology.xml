@@ -1,0 +1,495 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/srr#"
+     xml:base="https://w3id.org/srr"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/srr#">
+        <owl:versionIRI rdf:resource="https://w3id.org/srr/1.0.0"/>
+        <terms:contributor xml:lang="en">Ali khudhair, Cardiff University</terms:contributor>
+        <terms:creator xml:lang="en">Lini Xiang, Dalian University of Technology</terms:creator>
+        <terms:description xml:lang="en">This ontology includes two reliability analysis methods, Monte Carlo and  First-Order Second-Moment (FOSM). It can be combined with other building ontology to form a wider range of structure department ontology.</terms:description>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+        <terms:title xml:lang="en">Structural Reliability Representation</terms:title>
+        <vann:preferredNamespacePrefix>srr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/srr#"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionInfo>April 12, 2021</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/srr#hasCalculation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/srr#hasCalculation">
+        <rdfs:comment xml:lang="en">Describes the mathematical process of transforming one quantity to another.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Calculation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/srr#hasMechanicalCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/srr#hasMechanicalCharacteristics">
+        <rdfs:domain rdf:resource="https://w3id.org/srr#StructuralSystem"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/srr#FailureProbability"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#LimitStateEquation"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#RandomVariable"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#Reliability"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A relationship that various mechanical properties exist within a structural system.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Mechanical Characteristics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/srr#hasSolutions -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/srr#hasSolutions">
+        <rdfs:domain rdf:resource="https://w3id.org/srr#LimitStateEquation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/srr#FOSM"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#MenteCarlo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Defines that the function has a method to obtain solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Solutions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/srr#hasStatisticsCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/srr#hasStatisticsCharacteristics">
+        <rdfs:domain rdf:resource="https://w3id.org/srr#RandomVariable"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/srr#Distribution"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#Mean"/>
+                    <rdf:Description rdf:about="https://w3id.org/srr#StandardDeviation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">There are statistics relevant quantities that can describe things.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Statistics Characteristics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/srr#hasStepsWithinSolutions -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/srr#hasStepsWithinSolutions">
+        <rdfs:comment xml:lang="en">Describes that there are many steps within the solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Steps Within Solutions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/srr#NonNumericalValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/srr#NonNumericalValue">
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/srr#NumericalValue"/>
+        <rdfs:comment xml:lang="en">Describes a physical quantity that does not have the usual mathematical value in numerical form.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non Numerical Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/srr#NumericalValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/srr#NumericalValue">
+        <rdfs:comment xml:lang="en">Describes a physical quantity that has a numerical value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Numerical Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/srr#DesignPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#DesignPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#FOSM"/>
+        <rdfs:comment xml:lang="en">Most likely point of failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Design Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#Distribution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#Distribution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#RandomVariable"/>
+        <rdfs:comment xml:lang="en">Distribution is a statistical feature that describes the value of a random variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#FOSM -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#FOSM">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#LimitStateEquation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasCalculation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/srr#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasStepsWithinSolutions"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/srr#DesignPoint"/>
+                            <rdf:Description rdf:about="https://w3id.org/srr#Gradient"/>
+                            <rdf:Description rdf:about="https://w3id.org/srr#InitialValue"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/srr#MenteCarlo"/>
+        <rdfs:comment xml:lang="en">The first order second moment method is to use the mean value and standard deviation to perform linear Taylor expansion of the limit function, to solve the problem iteratively .</rdfs:comment>
+        <rdfs:label xml:lang="en">FOSM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#FailureProbability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#FailureProbability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#StructuralSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasCalculation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/srr#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The possibility of structural damage during the service period.</rdfs:comment>
+        <rdfs:label xml:lang="en">Failure Probability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#FailureSum -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#FailureSum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#MenteCarlo"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/srr#Sample"/>
+        <rdfs:comment xml:lang="en">This is the total number of structural failures after substituting the sample into the limit state function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Failure Sum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#Gradient -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#Gradient">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#FOSM"/>
+        <rdfs:comment xml:lang="en">The function changes fastest in this direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gradient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#InitialValue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#InitialValue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#FOSM"/>
+        <rdfs:comment xml:lang="en">The starting point of executing the first order second moment method.</rdfs:comment>
+        <rdfs:label xml:lang="en">Initial Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#LimitStateEquation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#LimitStateEquation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#StructuralSystem"/>
+        <rdfs:comment xml:lang="en">The limit state equation is the relationship between variables when the structure is about to crack.</rdfs:comment>
+        <rdfs:label xml:lang="en">Limit State Equation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#Mean -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#Mean">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#RandomVariable"/>
+        <rdfs:comment xml:lang="en">The mean value of the distribution of a random variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mean</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#MenteCarlo -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#MenteCarlo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#LimitStateEquation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasCalculation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/srr#FailureProbability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasStepsWithinSolutions"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/srr#FailureSum"/>
+                            <rdf:Description rdf:about="https://w3id.org/srr#Sample"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Monte Carlo method simulates the approximate solution of the limit equation through the statistical results of random sampling.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mente Carlo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#RandomVariable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#RandomVariable">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#StructuralSystem"/>
+        <rdfs:comment xml:lang="en">Random variables are used for structural uncertainty analysis. It refers to events that may or may not occur in reality, and therefore have random and uncertain values.</rdfs:comment>
+        <rdfs:label xml:lang="en">Random Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#Reliability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#Reliability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#StructuralSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/srr#hasCalculation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/srr#FailureProbability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It is an important design index that enables the reliability of the building structure to meet various predetermined functions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#Sample -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#Sample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#MenteCarlo"/>
+        <rdfs:comment xml:lang="en">The sampling results of Monte Carlo method.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#StandardDeviation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#StandardDeviation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/srr#RandomVariable"/>
+        <rdfs:comment xml:lang="en">Standard deviation describes the volatility of the distribution of a random variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard Deviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/srr#StructuralSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/srr#StructuralSystem">
+        <rdfs:comment xml:lang="en">The structural system represents an abstract representation of the mechanical concepts of civil,  mechanical or hydraulic or aerospace engineering.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/srr#DesignPoint"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#Gradient"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#InitialValue"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/srr#Distribution"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#Mean"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#StandardDeviation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/srr#FailureProbability"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#LimitStateEquation"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#RandomVariable"/>
+            <rdf:Description rdf:about="https://w3id.org/srr#Reliability"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
